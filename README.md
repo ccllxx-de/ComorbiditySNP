@@ -2,7 +2,7 @@
 
 Repository for Detecting disease comorbidity based on SNP association on PheWAS scale
 
-Authors: Lixian Chen and Li Liao
+
 
 ## Key Steps:
 
