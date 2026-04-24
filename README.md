@@ -146,12 +146,11 @@ This Python script performs binary classification of disease pairs using the **R
 
 This Python script performs binary classification of disease pairs using the **RR > 4** labeling threshold. Using the disease row vector in a cosine similarity matrix W derived from the disease-SNP data, it applies PCA to reduce each disease row vector to 50 principal components, concatenates the two diseases’ reduced vectors (creating 100-dimensional features per pair), trains a Random Forest classifier, runs 10-fold stratified cross-validation, evaluates on a held-out test set, and saves performance metrics.
 
-
 For **Table 3** SNP-V Random Forest results: 
 
 **scriptstoredSDVarPCA10063CV10alldiseasepairRR1SNPvectorsTrainTestEigen20Features50SNPseachConcatRF.py**
 
-This Python script gives a Random Forest classification pipeline using PCA-reduced SNP vectors for disease-pair prediction with the **RR > 1** labeling threshold. It standardizes the full disease-SNP matrix, reduces the original SNP features to 50 principal components per disease via PCA, concatenates the two diseases’ 50-PC vectors to create 100-dimensional features per pair, trains a Random Forest classifier, runs 10-fold stratified cross-validation plus a held-out test set evaluation, and conducts feature importance analysis to identify and obtain the top 1,000 most relevant SNPs based on ranked eigenvectors by absolute values.
+This Python script gives a Random Forest classification pipeline using PCA-reduced SNP vectors for disease-pair prediction with the **RR > 1** labeling threshold. It standardizes the full disease-SNP matrix, reduces the original SNP features to 50 principal components per disease via PCA, concatenates the two diseases’ 50-PC vectors to create 100-dimensional features per pair, trains a Random Forest classifier, runs 10-fold stratified cross-validation plus a held-out test set evaluation, and conducts feature importance analysis to identify and obtain the top 950-1,000 most relevant SNPs based on ranked eigenvectors by absolute values.
 
 The results file "RF_Top20_PC_to_SNP_Analysis.csv" gives the 20 most important PCA features, including which disease and PC they correspond to, plus the top 50 SNPs loaded on each feature. 
 
@@ -161,15 +160,27 @@ Use the results file "Concat_CV10Fold_Metrics_SNP_PCA_Detailed_RF_RR1.csv" for f
 
 **RFtable3SNPVRR1.R**
 
-This R script computes the mean and standard deviation of six classification performance metrics (Accuracy, Precision, Recall, F1, ROC AUC, and PR AUC) from the 10-fold cross-validation results of a Random Forest model that was trained on PCA-reduced SNP vectors using the RR > 1 labeling threshold.
+This R script computes the mean and standard deviation of six classification performance metrics (Accuracy, Precision, Recall, F1, ROC AUC, and PR AUC) from the 10-fold cross-validation results of a Random Forest model that was trained on PCA-reduced SNP vectors using the **RR > 1** labeling threshold.
+
+**scriptstoredSDVarPCA10062CV10alldiseasepairRR2SNPvectorsTrainTestEigen20Features50SNPseachConcatRF.py**
+
+This Python script gives a Random Forest classification pipeline using PCA-reduced SNP vectors for disease-pair prediction with the **RR > 2** labeling threshold. It standardizes the full disease-SNP matrix, reduces the original SNP features to 50 principal components per disease via PCA, concatenates the two diseases’ 50-PC vectors to create 100-dimensional features per pair, trains a Random Forest classifier, runs 10-fold stratified cross-validation plus a held-out test set evaluation, and conducts feature importance analysis to identify and obtain the top 950-1,000 most relevant SNPs based on ranked eigenvectors by absolute values.
+
+Use the results file "Concat_CV10Fold_Metrics_SNP_PCA_Detailed_RF_RR2.csv" for further analysis of the Random Forest model performance by **RFtable3SNPVRR2.R**. 
 
 **RFtable3SNPVRR2.R**
 
-This R script computes the mean and standard deviation of six classification performance metrics (Accuracy, Precision, Recall, F1, ROC AUC, and PR AUC) from the 10-fold cross-validation results of a Random Forest model that was trained on PCA-reduced SNP vectors using the RR > 2 labeling threshold.
+This R script computes the mean and standard deviation of six classification performance metrics (Accuracy, Precision, Recall, F1, ROC AUC, and PR AUC) from the 10-fold cross-validation results of a Random Forest model that was trained on PCA-reduced SNP vectors using the **RR > 2** labeling threshold.
+
+**scriptstoredSDVarPCA10061CV10alldiseasepairRR4SNPvectorsTrainTestEigen20Features50SNPseachConcatRF.py**
+
+This Python script gives a Random Forest classification pipeline using PCA-reduced SNP vectors for disease-pair prediction with the **RR > 4** labeling threshold. It standardizes the full disease-SNP matrix, reduces the original SNP features to 50 principal components per disease via PCA, concatenates the two diseases’ 50-PC vectors to create 100-dimensional features per pair, trains a Random Forest classifier, runs 10-fold stratified cross-validation plus a held-out test set evaluation, and conducts feature importance analysis to identify and obtain the top 950-1,000 most relevant SNPs based on ranked eigenvectors by absolute values.
+
+Use the results file "Concat_CV10Fold_Metrics_SNP_PCA_Detailed_RF_RR4.csv" for further analysis of the Random Forest model performance by **RFtable3SNPVRR4.R**. 
 
 **RFtable3SNPVRR4.R**
 
-This R script computes the mean and standard deviation of six classification performance metrics (Accuracy, Precision, Recall, F1, ROC AUC, and PR AUC) from the 10-fold cross-validation results of a Random Forest model that was trained on PCA-reduced SNP vectors using the RR > 4 labeling threshold.
+This R script computes the mean and standard deviation of six classification performance metrics (Accuracy, Precision, Recall, F1, ROC AUC, and PR AUC) from the 10-fold cross-validation results of a Random Forest model that was trained on PCA-reduced SNP vectors using the **RR > 4** labeling threshold.
 
 **Table 4 a)b)c) (Kolmogorov-Smirnov Test Results)**: Presents the KS-statistics and p-values from the two-sample KS test used to compare the distributions of association strengths between top and random SNPs, of all three cases of RR thresholds. 
 
