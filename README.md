@@ -241,7 +241,7 @@ Histogram520_topvsrandom_pos_snps_groups_abs_RR1.py,
 
 Histogram434_topvsrandom_neg_snps_groups_abs_RR1.py), 
 
-each of which will create a histogram comparing “Top” (red) vs “Random” (blue) SNP groupps with the distribution of mean absolute effect magnitudes of SNPs in three separate analyses (all with the **RR > 1** labeling threshold). Then use the Python script (Fig5Combined3HistogramsSNPsRR1.py) to combine and stack the three histograms vertically for **Figure 5**. 
+each of which will create a histogram comparing “Top” (red) vs “Random” (blue) SNP groups with the distribution of mean absolute effect magnitudes of SNPs in three separate analyses (all with the **RR > 1** labeling threshold). Then use the Python script (Fig5Combined3HistogramsSNPsRR1.py) to combine and stack the three histograms vertically for **Figure 5**. 
 
 To generate **Figure 6**,run each of the following Python scripts (order does not matter):
 
