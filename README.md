@@ -236,12 +236,15 @@ This Python script generates and displays **Figure 2**, i.e. a bar plot titled:
 To generate **Figure 5**, run each of the following Python scripts (order does not matter)
 
 (Histogram952_topvsrandom_snps_groups_abs_RR1.py, 
+
 Histogram520_topvsrandom_pos_snps_groups_abs_RR1.py, 
+
 Histogram434_topvsrandom_neg_snps_groups_abs_RR1.py), 
 
 each of which will create a histogram comparing “Top” (red) vs “Random” (blue) SNP groupps with the distribution of mean absolute effect magnitudes of SNPs in three separate analyses (all with the **RR > 1** labeling threshold). Then use the Python script (Fig5Combined3HistogramsSNPsRR1.py) to combine and stack the three histograms vertically for **Figure 5**. 
 
 To generate **Figure 6**,run each of the following Python scripts (order does not matter):
+
 Histogram950_topvsrandom_snps_groups_abs_RR2.py → creates the histogram for overall comparison of 950 Top SNPs versus 950 Random SNPs;
 
 Histogram509_topvsrandom_pos_snps_groups_abs_RR2.py → creates the histogram for the comparison of positive-effect SNPs only (509 Top vs 509 Random);
@@ -251,6 +254,7 @@ Histogram499_topvsrandom_neg_snps_groups_abs_RR2.py → creates the histogram fo
 all with the **RR > 2** labeling threshold. Then combine and stack the three individual histograms vertically for **Figure 6**. 
 
 To generate **Figure 7**,run each of the following Python scripts (order does not matter):
+
 Histogram950_topvsrandom_snps_groups_abs_RR4.py → creates the histogram for overall comparison of 950 Top SNPs versus 950 Random SNPs;
 
 Histogram505_topvsrandom_pos_snps_groups_abs_RR4.py → creates the histogram for the comparison of positive-effect SNPs only (505 Top vs 505 Random);
