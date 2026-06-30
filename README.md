@@ -61,7 +61,7 @@ Comorbidity labels were established based on Relative Risk (RR) calculated from 
 These three Python scripts are designed to create labeled datasets of disease pairs based on comorbidity relative risk (RR) from UK Biobank EHR data. 
 They are nearly identical except for the RR threshold (RR > 1, RR > 2, and RR > 4) used to assign the binary label (0 or 1).
 
-### Feature Engineering (Dimension Reduction): 
+### Feature Engineering (with Dimension Reduction): 
 
 Due to the extreme high dimensionality of SNP data (39,382 features), Principal Component Analysis (PCA) was used to reduce the data into lower-dimensional vectors (e.g., 50 components) while modulating information loss.
 
@@ -71,7 +71,7 @@ This Python script performs PCA dimensionality reduction on the full disease-SNP
 
 ### The Methods/Modeling Approaches:
 
-SNP Vector (SNP-V): Directly used concatenated reduced SNP vectors for a disease pair as input to a classifier.
+SNP Vector (SNP-V): Directly used concatenated reduced SNP vectors for a disease pair as the input to a classifier.
 
 Disease-Row Vector (DR-V): Used the entire row from a disease-disease similarity matrix (DDN) as a feature vector to capture broader network-level similarities.
 
